@@ -33,10 +33,19 @@ void home(){
 			listarFuncionarios();
 			break;
 		case 2:
-			cadastrarFuncionario();
+			if(qtdFuncionarios == 5){
+				printf("Numero maximo de funcionarios atingido...");
+				getch();
+				home();
+			}else{
+				cadastrarFuncionario();
+			}
 			break;
 		case 3:
-			aumentarSalario();
+			aumentarSalario();	
+			break;
+		default:
+			home();
 			break;
 	}
 }
